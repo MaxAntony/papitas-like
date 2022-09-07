@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FC } from "react";
+import { FC, Fragment } from "react";
 
 type NavElement = { title: string, path: string }
 
@@ -25,7 +25,11 @@ export const Navbar: FC = () => {
   return (
     <nav>
       <ul className="flex">
-        {navElements.map(ne => (<NavItem navElement={ne} />))}
+        {navElements.map((ne, i) => (
+          <Fragment key={i}>
+            <NavItem navElement={ne} />
+          </Fragment>
+        ))}
       </ul>
     </nav>
   )
