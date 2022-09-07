@@ -13,7 +13,7 @@ const NavItem: FC<{ navElement: NavElement }> = ({ navElement }) => {
   return (
     <li>
       <Link href={navElement.path}>
-        <a className="p-4">
+        <a className="px-4 cursor-pointer hover:bg-gray-400">
           {navElement.title}
         </a>
       </Link>
@@ -23,8 +23,10 @@ const NavItem: FC<{ navElement: NavElement }> = ({ navElement }) => {
 
 export const Navbar: FC = () => {
   return (
-    <nav>
-      <ul className="flex">
+    <nav className="flex flex-col items-center bg-gray-200">
+      <div className="w-48 h-24 bg-gray-400">
+      </div>
+      <ul className="flex justify-center mt-6">
         {navElements.map((ne, i) => (
           <Fragment key={i}>
             <NavItem navElement={ne} />

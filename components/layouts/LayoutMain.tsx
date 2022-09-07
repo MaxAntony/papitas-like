@@ -1,16 +1,32 @@
 import { Footer } from "@components/Footer";
 import { Navbar } from "@components/Navbar";
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 
 type props = { child: JSX.Element }
 export const LayoutMain: FC<props> = ({ child }) => {
   return (
-    <>
-      <Navbar />
-      <main>
-        {child}
+    <div className="w-screen h-screen grid" style={{
+      gridTemplateColumns: '1fr',
+      gridTemplateRows: 'auto 1fr auto',
+      gridTemplateAreas: `
+      'header'
+      'main'
+      'footer'
+      `
+    }}>
+      <div className="" style={{
+        gridArea: 'header'
+      }}>
+        <Navbar />
+      </div>
+      <main className="flex justify-center" style={{ gridArea: 'main' }}>
+        <div className=''>
+          {child}
+        </div>
       </main>
-      <Footer />
-    </>
+      <div className="" style={{ gridArea: 'footer' }}>
+        <Footer />
+      </div>
+    </div>
   )
 }
