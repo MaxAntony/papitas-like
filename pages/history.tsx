@@ -1,11 +1,7 @@
-import { NextPage } from "next";
+import { NextPage } from 'next';
 
 const HistoryPage: NextPage = () => {
-  return (
-    <div>
-      Pagina de Nuestra historia
-    </div>
-  )
-}
+  return <div>Pagina de Nuestra historia</div>;
+};
 
-export default HistoryPage
+export default HistoryPage;
