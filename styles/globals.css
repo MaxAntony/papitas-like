@@ -5,3 +5,26 @@
 a {
 	display: inline-block;
 }
+
+/* body::-webkit-scrollbar-thumb { */
+/* 	background-color: #999; */
+/* 	border-radius: 6px; */
+/* 	border: 3px solid #fff; */
+/* } */
+/**/
+/* body::-webkit-scrollbar { */
+/* 	width: 11px; */
+/* } */
+
+body {
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+}
+
+button:focus-visible {
+	outline: none;
+}
+
+*::-webkit-scrollbar {
+	width: 0;
+}
