@@ -1,7 +1,14 @@
 import { NextPage } from 'next';
 
 const HistoryPage: NextPage = () => {
-  return <div>Pagina de Nuestra historia</div>;
+	return (
+		<div>
+			<div className='h-96 bg-green-300'>hola</div>
+			<div className='h-96 bg-green-300'>hola</div>
+			<div className='h-96 bg-green-300'>hola</div>
+			<div className='h-96 bg-green-300'>hola</div>
+		</div>
+	);
 };
 
 export default HistoryPage;

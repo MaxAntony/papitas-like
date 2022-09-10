@@ -10,17 +10,25 @@ const navElements: NavElement[] = [
 	{ title: 'Contacto', path: '/contact' },
 ];
 
-const NavItem: FC<{ navElement: NavElement; scrolled: boolean }> = ({ navElement, scrolled }) => {
+type propsNavItem = { bgTransparent?: boolean; navElement: NavElement; scrolled: boolean };
+const NavItem: FC<propsNavItem> = ({ navElement, scrolled, bgTransparent }) => {
 	return (
 		<li>
 			<Link href={navElement.path}>
-				<a className={`cursor-pointer px-4 hover:bg-gray-400 group-hover:text-black ${scrolled ? '' : 'text-white'}`}>{navElement.title}</a>
+				<a
+					className={`cursor-pointer px-4 font-semibold hover:bg-gray-400 group-hover:text-black ${
+						!bgTransparent || scrolled ? 'text-black' : 'text-white'
+					}`}
+				>
+					{navElement.title}
+				</a>
 			</Link>
 		</li>
 	);
 };
 
-export const Navbar: FC = () => {
+type props = { bgTransparent?: boolean };
+export const Navbar: FC<props> = ({ bgTransparent }) => {
 	const [scrolled, setScrolled] = useState(false);
 
 	const changeNav = () => {
@@ -40,7 +48,7 @@ export const Navbar: FC = () => {
 				scrolled ? 'flex-row justify-between bg-white' : 'flex-col bg-transparent'
 			}`}
 		>
-			<div className={`relative bg-gray-400 transition-all duration-1000 ${scrolled ? 'my-4 ml-4 h-16 w-16' : 'mt-2 h-48 w-48'}`}>
+			<div className={`relative transition-all duration-1000 ${scrolled ? 'my-2 ml-2 h-20 w-28' : 'mt-2 h-36 w-48'}`}>
 				<Image
 					src={
 						'https://res.cloudinary.com/maxantony/image/upload/v1662678503/papitas-like/305025155_127563886687889_7683522127482910038_n-removebg-preview_x5umih.png'
@@ -53,7 +61,7 @@ export const Navbar: FC = () => {
 			<ul className={` flex justify-center ${scrolled ? '' : 'my-4'}`}>
 				{navElements.map((ne, i) => (
 					<Fragment key={i}>
-						<NavItem navElement={ne} scrolled={scrolled} />
+						<NavItem navElement={ne} scrolled={scrolled} bgTransparent={bgTransparent} />
 					</Fragment>
 				))}
 			</ul>
