@@ -35,6 +35,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 					name='viewport'
 					content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
 				/>
+				<title>Papitas Like | bocaditos naturales</title>
 				{/*				<link rel='icon' type='image/jpg' sizes='192x192' href='/icons/manifest-icon-192.jpg' />
 				<link rel='icon' type='image/jpg' sizes='512x512' href='/icons/manifest-icon-512.jpg' />
 				<link rel='manifest' href='/manifest.json' />
