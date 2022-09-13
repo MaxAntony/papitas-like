@@ -31,10 +31,8 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 				<meta property='og:site_name' content='Papitas Like' />
 				<meta property='og:url' content='https://papitaslike.com' />
 				<meta property='og:image' content='https://papitaslike.com/icons/manifest-icon-512.jpg' />
-				<meta
-					name='viewport'
-					content='minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover'
-				/>
+				<meta name='viewport' content='initial-scale=1, width=device-width' />
+				<title>Papitas Like | bocaditos naturales</title>
 				{/*				<link rel='icon' type='image/jpg' sizes='192x192' href='/icons/manifest-icon-192.jpg' />
 				<link rel='icon' type='image/jpg' sizes='512x512' href='/icons/manifest-icon-512.jpg' />
 				<link rel='manifest' href='/manifest.json' />
