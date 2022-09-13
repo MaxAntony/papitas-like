@@ -19,9 +19,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 		<>
 			<Head>
 				<meta name='application-name' content='Papitas Like' />
-				<meta name='description' content='Papitas Like brinda los mejores snack 100% naturales' />
+				<meta name='description' content='Papitas Huanuqueñas Like brinda los mejores snack 100% naturales' />
 				<meta name='author' content='Max Antony Paucar Ramirez' />
-				<meta name='keywords' content='Papita like, like snacks, bocaditos, huanuco, peru, bocaditos naturales' />
+				<meta name='keywords' content='Papita like, like snacks, bocaditos, huanuco, peru, bocaditos naturales, Papitas Huanuqueñas Like' />
 				<meta name='format-detection' content='telephone=no' />
 				<meta name='mobile-web-app-capable' content='yes' />
 				<meta name='theme-color' content='#000000' />
