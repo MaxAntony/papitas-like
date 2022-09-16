@@ -47,11 +47,11 @@ export const Navbar: FC<props> = ({ bgTransparent }) => {
   return (
     <div className={`${scrolled && 'drop-shadow-lg'}`}>
       <div
-        className={`fixed top-0 bottom-0 z-50 bg-black transition-opacity duration-500 ${movilMenuOpen ? 'w-full opacity-50' : 'w-0 opacity-0'
+        className={`fixed top-0 bottom-0 z-10 bg-black transition-opacity duration-500 ${movilMenuOpen ? 'w-full opacity-50' : 'w-0 opacity-0'
           }`}
       ></div>
       <div
-        className={`fixed top-0 bottom-0 z-20 bg-white transition-all duration-500 ${movilMenuOpen ? '' : ''}`}
+        className={`fixed top-0 bottom-0 z-30 bg-white transition-all duration-500 ${movilMenuOpen ? '' : ''}`}
         style={{ width: '767px', maxWidth: '90%', left: movilMenuOpen ? '0' : '-767px' }}
       >
         <div className='relative mb-2 mt-6 flex items-center justify-center'>
