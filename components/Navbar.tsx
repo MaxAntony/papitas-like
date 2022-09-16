@@ -45,9 +45,9 @@ export const Navbar: FC<props> = ({ bgTransparent }) => {
   }, []);
 
   return (
-    <>
+    <div className={`${scrolled && 'drop-shadow-lg'}`}>
       <div
-        className={`z-50z-50z-50z-50z-50z-50z-50z-50 fixed top-0 bottom-0 z-10 bg-black transition-opacity duration-500 ${movilMenuOpen ? 'w-full opacity-50' : 'w-0 opacity-0'
+        className={`fixed top-0 bottom-0 z-50 bg-black transition-opacity duration-500 ${movilMenuOpen ? 'w-full opacity-50' : 'w-0 opacity-0'
           }`}
       ></div>
       <div
@@ -106,6 +106,6 @@ export const Navbar: FC<props> = ({ bgTransparent }) => {
           ))}
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
