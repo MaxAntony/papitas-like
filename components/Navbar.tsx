@@ -45,13 +45,13 @@ export const Navbar: FC<props> = ({ bgTransparent }) => {
   }, []);
 
   return (
-    <div className={`${scrolled && 'drop-shadow-lg'}`}>
+    <Fragment>
       <div
         className={`fixed top-0 bottom-0 z-10 bg-black transition-opacity duration-500 ${movilMenuOpen ? 'w-full opacity-50' : 'w-0 opacity-0'
           }`}
       ></div>
       <div
-        className={`fixed top-0 bottom-0 z-30 bg-white transition-all duration-500 ${movilMenuOpen ? '' : ''}`}
+        className={`fixed top-0 bottom-0 z-30 h-full bg-white transition-all duration-500 ${movilMenuOpen ? '' : ''}`}
         style={{ width: '767px', maxWidth: '90%', left: movilMenuOpen ? '0' : '-767px' }}
       >
         <div className='relative mb-2 mt-6 flex items-center justify-center'>
@@ -81,31 +81,34 @@ export const Navbar: FC<props> = ({ bgTransparent }) => {
           ))}
         </div>
       </div>
-      <nav
-        className={`group flex items-center justify-center py-2 px-4 transition-all duration-1000 hover:text-black md:hover:bg-white ${scrolled ? 'bg-white md:flex-row md:justify-between' : 'flex-col bg-transparent'
-          }`}
-      >
-        <button
-          title='open menu'
-          className={`absolute left-4 md:hidden  ${!bgTransparent || scrolled ? 'text-primary' : 'text-white'}`}
-          style={{ fontSize: '28px' }}
-          onClick={() => {
-            setMovilMenuOpen(true);
-          }}
+
+      <div id='Navbar' className={`h-full ${scrolled && 'drop-shadow-lg'}`}>
+        <nav
+          className={`group flex items-center justify-center py-2 px-4 transition-all duration-1000 hover:text-black md:hover:bg-white ${scrolled ? 'bg-white md:flex-row md:justify-between' : 'flex-col bg-transparent'
+            }`}
         >
-          <FaBars />
-        </button>
-        <div className={`relative transition-all duration-1000 ${scrolled ? 'h-16 w-24 md:ml-2' : ' h-24 w-28'}`}>
-          <Image src={img.logo} alt='logo' fill style={{ objectFit: 'cover' }} />
-        </div>
-        <ul className={` hidden justify-center md:flex ${scrolled ? '' : 'my-4'}`}>
-          {navElements.map((ne, i) => (
-            <Fragment key={i}>
-              <NavItem navElement={ne} scrolled={scrolled} bgTransparent={bgTransparent} />
-            </Fragment>
-          ))}
-        </ul>
-      </nav>
-    </div>
+          <button
+            title='open menu'
+            className={`absolute left-4 md:hidden  ${!bgTransparent || scrolled ? 'text-primary' : 'text-white'}`}
+            style={{ fontSize: '28px' }}
+            onClick={() => {
+              setMovilMenuOpen(true);
+            }}
+          >
+            <FaBars />
+          </button>
+          <div className={`relative transition-all duration-1000 ${scrolled ? 'h-16 w-24 md:ml-2' : ' h-24 w-28'}`}>
+            <Image src={img.logo} alt='logo' fill style={{ objectFit: 'cover' }} />
+          </div>
+          <ul className={` hidden justify-center md:flex ${scrolled ? '' : 'my-4'}`}>
+            {navElements.map((ne, i) => (
+              <Fragment key={i}>
+                <NavItem navElement={ne} scrolled={scrolled} bgTransparent={bgTransparent} />
+              </Fragment>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </Fragment>
   );
 };

@@ -5,7 +5,7 @@ import { FC, ReactNode } from 'react';
 export const LayoutIndex: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
-      <div className='fixed top-0 z-20 w-full transition-all duration-700'>
+      <div className='fixed top-0 bottom-0 z-20 w-full transition-all duration-700'>
         <Navbar bgTransparent={true} />
       </div>
       <div
