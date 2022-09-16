@@ -34,7 +34,7 @@ const FooterSection: FC<{ children: ReactNode; title: string }> = ({ children, t
 
 export const Footer: FC = () => {
   return (
-    <footer className='flex flex-col justify-center py-4 text-white'>
+    <footer className='flex flex-col justify-center py-4'>
       <div className='flex flex-col justify-evenly md:flex-row'>
         <FooterSection title='Mas Informacion'>
           <ul className='flex flex-col items-center'>
