@@ -84,8 +84,9 @@ export const Navbar: FC<props> = ({ bgTransparent }) => {
 
       <div id='Navbar' className={`h-full ${scrolled && 'drop-shadow-lg'}`}>
         <nav
-          className={`group flex items-center justify-center py-2 px-4 transition-all duration-1000 hover:text-black md:hover:bg-white ${scrolled ? 'bg-white md:flex-row md:justify-between' : 'flex-col bg-transparent'
-            }`}
+          className={`group flex items-center justify-center py-2 px-4 transition-all duration-1000 
+                      hover:text-black md:hover:bg-white 
+                      ${scrolled ? 'bg-white md:flex-row md:justify-between' : 'flex-col bg-transparent'}`}
         >
           <button
             title='open menu'

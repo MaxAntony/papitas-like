@@ -1,31 +1,25 @@
 import { LayoutIndex } from '@components/layouts/LayoutIndex';
 import Image from 'next/future/image';
-import { FC, Fragment } from 'react';
+import { FC } from 'react';
 import { img } from 'utils/data';
 import { NextPageWithLayout } from './_app';
 
 type CardData = { img: string; title: string; description: string };
 const cardData: CardData[] = [
   {
-    img: 'https://res.cloudinary.com/maxantony/image/upload/v1663330366/papitas-like/summary__sm_wne6ev.jpg',
-    title: 'Papitas con un sabor intenso',
-    description: `With Walkers, youll never have to sacrifice flavour to cut down on calories. And whilst these snacks are not low-caloriethey
-            might be lower than you think, helping you to enjoy our snacks responsibly.
-`,
+    img: 'https://res.cloudinary.com/maxantony/image/upload/v1664233375/papitas-like/293182388_109324178511860_279460675261365078_n_al8re3.jpg',
+    title: '100% Naturales',
+    description: `Nuestros productos se elaboran a mano meticulosamente para un mejor desarrollo y acabado final.`,
   },
   {
-    img: 'https://res.cloudinary.com/maxantony/image/upload/v1663330366/papitas-like/summary__sm_wne6ev.jpg',
-    title: 'Papitas con un sabor intenso',
-    description: `With Walkers, youll never have to sacrifice flavour to cut down on calories. And whilst these snacks are not low-caloriethey
-            might be lower than you think, helping you to enjoy our snacks responsibly.
-`,
+    img: 'https://res.cloudinary.com/maxantony/image/upload/v1664233543/papitas-like/296825683_118273177616960_586246744402616391_n_tm2tcl.jpg',
+    title: 'Disfrutalas a cualquier hora',
+    description: `En el trabajo, en el transporte o mientras descansas siempre es un buen momento para darte un gustito`,
   },
   {
-    img: 'https://res.cloudinary.com/maxantony/image/upload/v1663330366/papitas-like/summary__sm_wne6ev.jpg',
-    title: 'Papitas con un sabor intenso',
-    description: `With Walkers, youll never have to sacrifice flavour to cut down on calories. And whilst these snacks are not low-caloriethey
-            might be lower than you think, helping you to enjoy our snacks responsibly.
-`,
+    img: 'https://res.cloudinary.com/maxantony/image/upload/v1664233651/papitas-like/299377317_121204157323862_4891396918322721696_n_ngxmka.jpg',
+    title: 'Orgullo Huanuqueño',
+    description: `Nuestros agricultores huanuqueños son los principales abastecedores de para la elaboración de nuestros snacks`,
   },
 ];
 
@@ -58,8 +52,8 @@ const Home: NextPageWithLayout = () => {
         <div className='relative px-8 md:flex md:w-[1000px] md:justify-center'>
           <div className='px-8 pt-10 pb-16 text-white md:px-0'>
             <h2 className='mb-16 mt-8 text-4xl font-bold md:text-8xl'>Nosotros</h2>
-            <p className=''>When you look at a potato, what do you see? Probably just a potato, right? </p>
-            <p>With a bite of positivity he turned his humble spuds into </p>
+            <p>Brindamos bocaditos a base de hojuelas de papa 100% organicas</p>
+            <p>buscando promover el consumo de alimentos de nuestra tierra</p>
             <div className='mt-10 flex w-full justify-center'>
               <h3 className='text-3xl font-extrabold uppercase'>
                 Like
@@ -98,10 +92,10 @@ const Home: NextPageWithLayout = () => {
         <div className='mx-8 my-20 px-8'>
           <div className='m-4 flex flex-col items-center'>
             <h2 className='py-8 text-center text-4xl font-bold uppercase text-primary md:text-6xl'>las papitas que estabas esperando</h2>
-            <div className='relative mt-12 h-80 w-60'>
+            <div className='relative mt-12 h-96 w-60'>
               <Image
                 fill
-                src={'https://res.cloudinary.com/maxantony/image/upload/v1663329985/papitas-like/ready-salted__sm_dym3at.png'}
+                src={'https://res.cloudinary.com/maxantony/image/upload/v1664232989/papitas-like/Board-1_h79n6k.png'}
                 alt='papitas'
                 style={{ objectFit: 'cover' }}
               />

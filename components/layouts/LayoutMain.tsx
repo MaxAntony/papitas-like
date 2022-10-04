@@ -22,7 +22,7 @@ export const LayoutMain: FC<props> = ({ children }) => {
           gridTemplateRows: ' 1fr auto',
         }}
       >
-        <main className='flex flex-col justify-center ' style={{ paddingTop }}>
+        <main className='flex flex-col ' style={{ paddingTop }}>
           {children}
         </main>
         <div>
